@@ -1,13 +1,21 @@
 # T65
 Verbind een T65 telefoon met een Raspberry Pi.
-In deze eerste versie verschijnt er een tafeltjessom (van 1 t/m 10) op het scherm. Het juiste antwoord kan met de draaischijf worden ingevoerd.
+Via de hoorn hoor je een tafeltjessom. Voer de uitkomst in via de draaischijf. Je hoort of het antwoord goed of fout is.
+Oorspronkelijk idee: via https://github.com/tammojan/sommentelefoon
 
 ## Aansluitingen
 * Rode draad van de draaischijf naar Ground
 * Blauwe draad van de draaischijf naar GPIO18
 
+Gebruik een audio kabel met jackplug (knip bijvoorbeeld de kabel van een koptelefoon door).
+
+* Rode of witte draad naar de rode aansluiting van de hoorn
+* Draad zonder mantel naar de blauwe aansluiting van de hoorn
+
+De kleur van de draad in de audiokabel kan bij andere kabels verschillend zijn.
+
 ## To do
-* Audio (opgave + feedback over antwoord) via de luidspreker in de hoorn.
+* Geschikt maken voor Raspberry Pi Zero
 * Verbinden met internet (voor bijvoorbeeld spraakberichten via Signal?)
 
-Suggesties voor originele functionaliteiten zijn welkom!
+Suggesties voor andere originele functionaliteiten zijn welkom!
