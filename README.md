@@ -1,4 +1,4 @@
-# T65
+# PTT Tafeltjes Telefoon (afgekort "PTT")
 Verbind een T65 telefoon met een Raspberry Pi.
 Via de hoorn hoor je een tafeltjessom. Voer de uitkomst in via de draaischijf. Je hoort of het antwoord goed of fout is.
 Som niet goed verstaan? Met de knop rechts onder de draaischijf (aardtoets) wordt de opgave nog eens herhaald.
