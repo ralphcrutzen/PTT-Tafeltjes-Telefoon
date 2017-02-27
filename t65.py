@@ -7,17 +7,6 @@ import time
 import random
 import pygame
 
-SCHIJFPIN = 18
-AARDPIN = 23
-HOORNPIN = 24
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(SCHIJFPIN, GPIO.IN, pull_up_down = GPIO.PUD_UP)
-GPIO.setup(HOORNPIN, GPIO.IN, pull_up_down = GPIO.PUD_UP)
-GPIO.setup(AARDPIN, GPIO.IN, pull_up_down = GPIO.PUD_UP) # Laag als ingedruk!!!
-
-pygame.mixer.init()
-
 
 def speel(bestand):
     pygame.mixer.music.load(bestand)
@@ -71,14 +60,26 @@ def hoornCallback(channel):
     python = sys.executable
     os.execl(python, python, * sys.argv)
 
+
+SCHIJFPIN = 18
+AARDPIN = 23
+HOORNPIN = 24
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(SCHIJFPIN, GPIO.IN, pull_up_down = GPIO.PUD_UP)
+GPIO.setup(HOORNPIN, GPIO.IN, pull_up_down = GPIO.PUD_UP)
+GPIO.setup(AARDPIN, GPIO.IN, pull_up_down = GPIO.PUD_UP)
+
 # Gebruik een interrupt voor de hoorn,
 # omdat deze op elk moment kan worden neergelegd
 GPIO.add_event_detect(HOORNPIN, GPIO.BOTH, callback = hoornCallback)
 
+pygame.mixer.init()
+
 while True:
     try:
         # Wacht op hoorn
-        print "Pak de hoorn op!"
+        print "Wacht op hoorn..."
         hoornContact = GPIO.input(HOORNPIN)
         while hoornContact == True:
             hoornContact = GPIO.input(HOORNPIN)
@@ -89,9 +90,18 @@ while True:
         speel("audio/welk.mp3")
         tafeltje = getNummer()
 
+        # Lijst om bij te houden welke sommen goed/fout beantwoord zijn
+        sommen = []
         for som in range(10):
+            sommen.append(0) # 0 is fout, 1 is goed
+        aantalGoed = 0
+
+        while aantalGoed < 10:
             # Bepaal opgave
             getal1 = random.randint(1,10)
+            while sommen[getal1 - 1] == 1:
+                getal1 = random.randint(1,10)
+
             if tafeltje == -1:
                 getal2 = random.randint(1,10)
             elif tafeltje == 0:
@@ -119,8 +129,9 @@ while True:
 
             # Controleer antwoord
             if int(antwoord) == uitkomst:
+                aantalGoed = aantalGoed + 1
+                sommen[getal1 - 1] = 1
                 print "Goed zo!"
-                speel("audio/" + str(antwoord) + ".mp3")
                 speel("audio/goed.mp3")
             else:
                 print "Jammer, de juiste uitkomst is", uitkomst
