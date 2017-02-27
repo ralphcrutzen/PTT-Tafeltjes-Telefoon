@@ -31,10 +31,15 @@ De kleur van de draad in de audiokabel kan bij andere kabels verschillend zijn.
 ## Links
 
 Oorspronkelijk idee: https://github.com/tammojan/sommentelefoon
+
 PTT schema T65 toestellen: https://dutchtelecom.files.wordpress.com/2016/05/ptt_schema_t65_toestellen_1974-1987.pdf
+
 Overzicht GPIO pinnen Raspberry Pi 3B: http://www.raspberrypi-spy.co.uk/wp-content/uploads/2012/06/Raspberry-Pi-GPIO-Layout-Model-B-Plus-rotated-2700x900.png
+
 Detecteren of een knop is ingedrukt: http://razzpisampler.oreilly.com/ch07.html
+
 Interrupts: http://raspi.tv/2014/rpi-gpio-update-and-detecting-both-rising-and-falling-edges
+
 Herstarten van het huidige Python programma: https://www.daniweb.com/programming/software-development/code/260268/restart-your-python-program
 
 ## To do
