@@ -1,7 +1,7 @@
 # PTT Tafeltjes Telefoon (afgekort "PTT")
 Verbind een T65 telefoon met een Raspberry Pi. Het gebruikte model is een Raspberry Pi 3 Model B. Besturingssysteem: Raspbian Jessie Lite.
 
-Neem de hoorn op en kies met de draaischijf welk tafeltje je wil oefenen. Met de knop rechts onder de draaischijf (de aardtoets) oefen je alle tafeltjes door elkaar. Vervolgens hoor je 10 willekeurige tafeltjessommen. Voer de uitkomst in via de draaischijf. Je hoort of het antwoord goed of fout is. Som niet goed verstaan? Met de aardtoets wordt de opgave nog eens herhaald. Het oefenen stopt door de hoorn neer te leggen en begint opnieuw door de hoorn op te nemen.
+Neem de hoorn op en kies met de draaischijf welk tafeltje je wil oefenen. Met de knop rechts onder de draaischijf (de aardtoets) oefen je alle tafeltjes door elkaar. Vervolgens hoor je minstens 10 sommen. Voer de uitkomst in via de draaischijf. Je hoort of het antwoord goed of fout is. Wanneer je een som fout beantwoord, komt hij op een ander moment weer terug, totdat het antwoord goed is. Som niet goed verstaan? Met de aardtoets wordt de opgave nog eens herhaald. Het oefenen stopt door de hoorn neer te leggen en begint opnieuw door de hoorn op te nemen.
 
 ## Aansluitingen
 
@@ -58,8 +58,7 @@ Interrupts: http://raspi.tv/2014/rpi-gpio-update-and-detecting-both-rising-and-f
 Herstarten van het huidige Python programma: https://www.daniweb.com/programming/software-development/code/260268/restart-your-python-program
 
 ## To do
-* Adaptief toetsen: sommen met juiste antwoorden komen niet meer terug; sommen met foute antwoorden worden herhaald totdat alles goed is.
 * Geschikt maken voor Raspberry Pi Zero, die geen analoge audio uitgang heeft.
-* Verbinden met internet (voor bijvoorbeeld spraakberichten via Signal?)
+* Verbinden met internet (voor bijvoorbeeld spraakberichten via Signal?)  <-- Dit wordt een ander project.
 
 Suggesties voor andere originele functionaliteiten zijn welkom!
