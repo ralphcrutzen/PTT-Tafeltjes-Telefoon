@@ -7,7 +7,7 @@ Neem de hoorn op en kies met de draaischijf welk tafeltje je wil oefenen. Met de
 
 ### Draaischijf
 
-[[https://github.com/ralphcrutzen/PTT-Tafeltjes-Telefoon/blob/master/foto/PTT-draaischijf.jpg|alt=draaischijf]]
+![draaischijf](https://github.com/ralphcrutzen/PTT-Tafeltjes-Telefoon/blob/master/foto/PTT-draaischijf.jpg)
 
 De contacten van de draaischijf en de knoppen onder de hoorn zijn in de telefoon met elkaar verbonden. Om het script toch het verschil tussen het draaien aan de schijf en het oppakken van de hoorn te kunnen laten detecteren, moeten er bij de draaischijf enkele verbindingen worden gewijzigd.
 
@@ -18,7 +18,7 @@ De contacten van de draaischijf en de knoppen onder de hoorn zijn in de telefoon
 
 ### Luidspreker
 
-[[https://github.com/ralphcrutzen/PTT-Tafeltjes-Telefoon/blob/master/foto/PTT-luidspreker.jpg|alt=draaischijf]]
+![luidspreker](https://github.com/ralphcrutzen/PTT-Tafeltjes-Telefoon/blob/master/foto/PTT-luidspreker.jpg)
 
 Gebruik een audio kabel met jackplug (knip bijvoorbeeld de kabel van een koptelefoon door).
 
@@ -29,7 +29,7 @@ De kleur van de draad in de audiokabel kan bij andere kabels verschillend zijn.
 
 ### Aardknop en hoornknoppen
 
-[[https://github.com/ralphcrutzen/PTT-Tafeltjes-Telefoon/blob/master/foto/PTT-hoornknoppen-aardknop.jpg|alt=draaischijf]]
+![aardknop-hoornknoppen](https://github.com/ralphcrutzen/PTT-Tafeltjes-Telefoon/blob/master/foto/PTT-hoornknoppen-aardknop.jpg)
 
 * Rode aansluiting (1) van de aansluitkamer naar Ground op de RPi.
 * Groene aansluiting (2) van de aansluitkamer naar GPIO23 op de RPi. (Aardtoets)
