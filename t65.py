@@ -139,5 +139,6 @@ while True:
                 speel("audio/" + str(uitkomst) + ".mp3")
             print
             time.sleep(1)
+        speel("audio/einde.mp3")
     except KeyboardInterrupt: # Ctrl+C
         GPIO.cleanup()
