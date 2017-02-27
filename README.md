@@ -7,9 +7,9 @@ Neem de hoorn op en kies met de draaischijf welk tafeltje je wil oefenen. Met de
 
 ### Draaischijf
 
-![draaischijf](https://github.com/ralphcrutzen/PTT-Tafeltjes-Telefoon/blob/master/foto/PTT-draaischijf.jpg)
-
 De contacten van de draaischijf en de knoppen onder de hoorn zijn in de telefoon met elkaar verbonden. Om het script toch het verschil tussen het draaien aan de schijf en het oppakken van de hoorn te kunnen laten detecteren, moeten er bij de draaischijf enkele verbindingen worden gewijzigd.
+
+![draaischijf](https://github.com/ralphcrutzen/PTT-Tafeltjes-Telefoon/blob/master/foto/PTT-draaischijf.jpg)
 
 * De rode draad van de draaischijf loskoppelen van de telefoon en verbinden met Ground op de RPi.
 * De blauwe draad van de draaischijf loskoppelen van de telefoon en verbinden met GPIO18 op de RPi.
@@ -18,9 +18,9 @@ De contacten van de draaischijf en de knoppen onder de hoorn zijn in de telefoon
 
 ### Luidspreker
 
-![luidspreker](https://github.com/ralphcrutzen/PTT-Tafeltjes-Telefoon/blob/master/foto/PTT-luidspreker.jpg)
-
 Gebruik een audio kabel met jackplug (knip bijvoorbeeld de kabel van een koptelefoon door).
+
+![luidspreker](https://github.com/ralphcrutzen/PTT-Tafeltjes-Telefoon/blob/master/foto/PTT-luidspreker.jpg)
 
 * Draad zonder mantel van de audiokabel naar de blauwe aansluiting (11) van de hoorn in de aansluitkamer.
 * Rode of witte draad van de audiokabel naar de rode aansluiting (12) van de hoorn in de aansluitkamer.
