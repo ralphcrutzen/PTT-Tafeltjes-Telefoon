@@ -12,9 +12,9 @@ AARDPIN = 23
 HOORNPIN = 24
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(SCHIJFPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(HOORNPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(AARDPIN, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Laag als ingedruk!!!
+GPIO.setup(SCHIJFPIN, GPIO.IN, pull_up_down = GPIO.PUD_UP)
+GPIO.setup(HOORNPIN, GPIO.IN, pull_up_down = GPIO.PUD_UP)
+GPIO.setup(AARDPIN, GPIO.IN, pull_up_down = GPIO.PUD_UP) # Laag als ingedruk!!!
 
 pygame.mixer.init()
 
@@ -92,9 +92,12 @@ while True:
         for som in range(10):
             # Bepaal opgave
             getal1 = random.randint(1,10)
-            getal2 = tafeltje
             if tafeltje == -1:
                 getal2 = random.randint(1,10)
+            elif tafeltje == 0:
+                getal2 = 10
+            else:
+                getal2 = tafeltje
             uitkomst = getal1 * getal2
             nCijfers = len(str(uitkomst))
 
