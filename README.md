@@ -35,6 +35,14 @@ De kleur van de draad in de audiokabel kan bij andere kabels verschillend zijn.
 * Groene aansluiting (2) van de aansluitkamer naar GPIO23 op de RPi. (Aardtoets)
 * Blauwe aansluiting (3) van de aansluitkamer naar GPIO24 op de RPi. (Hoornknoppen)
 
+## Software installeren
+
+* Plaats *t65.py* en de map *audio* in */home/pi/t65*.
+* Om het programma automatisch uit te voeren wanneer de Raspberry Pi opstart, voege je de volgende regel toe aan */etc/rc/local*, direct boven de regel ```exit 0```:
+```
+sudo amixer sset PCM,0 100% && cd /home/pi/t65 && python t65.py &
+```
+
 ## Links
 
 Oorspronkelijk idee: https://github.com/tammojan/sommentelefoon
