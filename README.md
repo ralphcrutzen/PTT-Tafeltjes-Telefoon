@@ -11,8 +11,8 @@ De contacten van de draaischijf en de knoppen onder de hoorn zijn in de telefoon
 
 ![draaischijf](https://github.com/ralphcrutzen/PTT-Tafeltjes-Telefoon/blob/master/foto/PTT-draaischijf.jpg)
 
-* De rode draad van de draaischijf loskoppelen van de telefoon en verbinden met Ground op de RPi.
-* De blauwe draad van de draaischijf loskoppelen van de telefoon en verbinden met GPIO18 op de RPi.
+* De rode draad van de draaischijf loskoppelen van de telefoon en verbinden met GPIO25 op de RPi.
+* De blauwe draad van de draaischijf loskoppelen van de telefoon en verbinden met Ground op de RPi.
 * De gele draad van de draaischijf loskoppelen en verbinden met "Rd" van de telefoon.
 * Een extra stukje draad gebruiken om "Bl" met "Rd" in de telefoon met elkaar te verbinden.
 
