@@ -61,7 +61,7 @@ def hoornCallback(channel):
     os.execl(python, python, * sys.argv)
 
 
-SCHIJFPIN = 18
+SCHIJFPIN = 25
 AARDPIN = 23
 HOORNPIN = 24
 
