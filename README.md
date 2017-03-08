@@ -37,6 +37,10 @@ De kleur van de draad in de audiokabel kan bij andere kabels verschillend zijn.
 
 ## Software installeren
 
+* Wanneer je de Lite versie van Raspbian gebruikt, installeer dan nog Pygame, de Python library die nodig is om geluid af te spelen:
+```
+sudo apt install python-pygame
+```
 * Plaats *t65.py* en de map *audio* in */home/pi/t65*.
 * Om het programma automatisch uit te voeren wanneer de Raspberry Pi opstart, voeg je de volgende regel toe aan */etc/rc.local*, direct boven de regel ```exit 0```:
 ```
