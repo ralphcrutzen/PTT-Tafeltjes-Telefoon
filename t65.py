@@ -83,7 +83,7 @@ while True:
         hoornContact = GPIO.input(HOORNPIN)
         while hoornContact == True:
             hoornContact = GPIO.input(HOORNPIN)
-        time.sleep (2)
+        time.sleep (1)
 
         # Welk tafeltje oefenen?
         print "Welk tafeltje?"
