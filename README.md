@@ -1,7 +1,7 @@
 # PTT Tafeltjes Telefoon (afgekort "PTT")
 Verbind een T65 telefoon met een Raspberry Pi. Het gebruikte model is een Raspberry Pi 3 Model B. Besturingssysteem: Raspbian Jessie Lite.
 
-Neem de hoorn op en kies met de draaischijf welk tafeltje je wil oefenen. Met de knop rechts onder de draaischijf (de aardtoets) oefen je alle tafeltjes door elkaar. Vervolgens hoor je minstens 10 sommen. Voer de uitkomst in via de draaischijf. Je hoort of het antwoord goed of fout is. Wanneer je een som fout beantwoord, komt hij op een ander moment weer terug, totdat het antwoord goed is. Som niet goed verstaan? Met de aardtoets wordt de opgave nog eens herhaald. Het oefenen stopt door de hoorn neer te leggen en begint opnieuw door de hoorn op te nemen.
+Neem de hoorn op en kies met de draaischijf welk tafeltje je wil oefenen. Met de knop rechts onder de draaischijf (de aardtoets) oefen je alle tafeltjes door elkaar. Vervolgens hoor je minstens 10 sommen. Voer de uitkomst in via de draaischijf. Je hoort of het antwoord goed of fout is. Wanneer je een som fout beantwoordt, komt hij op een ander moment weer terug, totdat het antwoord goed is. Som niet goed verstaan? Met de aardtoets wordt de opgave nog eens herhaald. Het oefenen stopt door de hoorn neer te leggen en begint opnieuw door de hoorn op te nemen.
 
 ## Aansluitingen
 
