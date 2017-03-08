@@ -57,8 +57,16 @@ Interrupts: http://raspi.tv/2014/rpi-gpio-update-and-detecting-both-rising-and-f
 
 Herstarten van het huidige Python programma: https://www.daniweb.com/programming/software-development/code/260268/restart-your-python-program
 
-## To do
-* Geschikt maken voor Raspberry Pi Zero, die geen analoge audio uitgang heeft.
-* Verbinden met internet (voor bijvoorbeeld spraakberichten via Signal?)  <-- Dit wordt een ander project.
+## Raspberry Pi Zero
 
-Suggesties voor andere originele functionaliteiten zijn welkom!
+Het is me ook gelukt om een Raspberry Pi Zero in de telefoon in te bouwen. De enige kabel die dan nog uit de telefoon komt, is de usb kabel. Ik heb de volgende dingen gedaan:
+
+* Een Wifi dongle aangesloten en de volgende handleiding gebruikt om ssh toegang tot de Pi Zero te krijgen: https://davidmaitland.me/2015/12/raspberry-pi-zero-headless-setup/
+* De Pi Zero geschikt maken om analoge audio af te spelen. Hiervoor heb ik de volgende handleiding gebruikt: https://learn.adafruit.com/adding-basic-audio-ouput-to-raspberry-pi-zero?view=all#overview. Ik heb "Option 2. Manually Assigning PWM pins" gevolgd. Omdat de audio mono is, heb ik deze handleiding alleen voor GPIO13 toegepast.
+* De twee weerstanden en de twee condensatoren heb ik op een "Breakout Pi Zero" printplaatje gesoldeerd: https://www.abelectronics.co.uk/p/68/Breakout-Pi-Zero.
+* De bellen, inclusief de spoel, het volumewieltje en de koperkleurige grondplaat waarop deze bevestigd zijn, uit de T65 verwijderd. Hiervoor heb ik de twee metalen strips die in de printplaat op de bodem vast zitten, doorgeknipt. De usb kabel komt naar buiten door het gat waar voorheen het volumewieltje zat.
+* De 5 kabels van de draaischijf, aardknop en hoornknoppen heb ik niet meer in de aansluitkamer vastgemaakt, maar aan dezelfde schroeven in de binnenkant van de telefoon. Hiervoor moet je wel eerst de doorzichtige kap van de hoorknoppen losmaken.
+
+## To do
+
+* Het geluid klinkt veel te zacht met een Pi Zero. Uitzoeken of het nog harder kan. Wellicht door, naast GPIO13, ook GPIO18 te gebruiken?
