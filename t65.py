@@ -16,7 +16,7 @@ def speel(bestand):
 
 
 def speelSom(getal1, getal2):
-    print "Wat is", getal1, "x", getal2,"?"
+    print("Wat is", getal1, "x", getal2,"?")
     speel("audio/" + str(getal1) + ".mp3")
     speel("audio/keer.mp3")
     speel("audio/" + str(getal2) + ".mp3")
@@ -54,7 +54,7 @@ def getNummer():
 
 
 def hoornCallback(channel):
-    print "Hoorn!", channel
+    print("Hoorn!", channel)
     # herstart het hele script
     GPIO.cleanup()
     python = sys.executable
@@ -79,14 +79,14 @@ pygame.mixer.init()
 while True:
     try:
         # Wacht op hoorn
-        print "Wacht op hoorn..."
+        print("Wacht op hoorn...")
         hoornContact = GPIO.input(HOORNPIN)
         while hoornContact == True:
             hoornContact = GPIO.input(HOORNPIN)
         time.sleep (1)
 
         # Welk tafeltje oefenen?
-        print "Welk tafeltje?"
+        print("Welk tafeltje?")
         speel("audio/welk.mp3")
         tafeltje = getNummer()
 
@@ -125,19 +125,19 @@ while True:
                     speelSom(getal1, getal2)
                     huidigCijfer = 0
                     antwoord = ""
-            print antwoord
+            print(antwoord)
 
             # Controleer antwoord
             if int(antwoord) == uitkomst:
                 aantalGoed = aantalGoed + 1
                 sommen[getal1 - 1] = 1
-                print "Goed zo!"
+                print("Goed zo!")
                 speel("audio/goed.mp3")
             else:
-                print "Jammer, de juiste uitkomst is", uitkomst
+                print("Jammer, de juiste uitkomst is", uitkomst)
                 speel("audio/fout.mp3")
                 speel("audio/" + str(uitkomst) + ".mp3")
-            print
+            print()
             time.sleep(1)
         speel("audio/einde.mp3")
     except KeyboardInterrupt: # Ctrl+C
