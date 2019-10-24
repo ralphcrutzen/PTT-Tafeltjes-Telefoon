@@ -1,12 +1,6 @@
 #!/usr/bin/env python
-
+import sys, os, time, random, pygame
 import RPi.GPIO as GPIO
-import sys
-import os
-import time
-import random
-import pygame
-
 
 def speel(bestand):
     pygame.mixer.music.load(bestand)
@@ -14,14 +8,12 @@ def speel(bestand):
     while pygame.mixer.music.get_busy() == True:
         continue
 
-
 def speelSom(getal1, getal2):
     print("Wat is", getal1, "x", getal2,"?")
     speel("audio/" + str(getal1) + ".mp3")
     speel("audio/keer.mp3")
     speel("audio/" + str(getal2) + ".mp3")
     speel("audio/is.mp3")
-
 
 def getNummer():
     nPulsen = 0
@@ -31,7 +23,6 @@ def getNummer():
     while schijfContact == False and aardContact == True:
         schijfContact = GPIO.input(SCHIJFPIN)
         aardContact = GPIO.input(AARDPIN)
-
     # Aardtoets ingedrukt
     if aardContact == False:
         return -1
@@ -43,15 +34,12 @@ def getNummer():
         startTijd = time.time()
         time.sleep(0.1)
         schijfContact = GPIO.input(SCHIJFPIN)
-
         # Controleer tijd tussen twee pulsen
         while klaar == False and schijfContact == False:
             if time.time() - startTijd >= 0.2:
                 klaar = True
             schijfContact = GPIO.input(SCHIJFPIN)
-
     return nPulsen % 10
-
 
 def hoornCallback(channel):
     print("Hoorn!", channel)
@@ -59,7 +47,6 @@ def hoornCallback(channel):
     GPIO.cleanup()
     python = sys.executable
     os.execl(python, python, * sys.argv)
-
 
 SCHIJFPIN = 25
 AARDPIN = 23
@@ -74,6 +61,7 @@ GPIO.setup(AARDPIN, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 # omdat deze op elk moment kan worden neergelegd
 GPIO.add_event_detect(HOORNPIN, GPIO.BOTH, callback = hoornCallback)
 
+# Initiliseer audio mixer
 pygame.mixer.init()
 
 while True:
