@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import RPi.GPIO as GPIO
 import sys
 import os
@@ -7,13 +6,11 @@ import time
 import random
 import pygame
 
-
 def speel(bestand):
     pygame.mixer.music.load(bestand)
     pygame.mixer.music.play()
     while pygame.mixer.music.get_busy() == True:
         continue
-
 
 def speelSom(getal1, getal2):
     print "Wat is", getal1, "x", getal2,"?"
@@ -21,7 +18,6 @@ def speelSom(getal1, getal2):
     speel("audio/keer.mp3")
     speel("audio/" + str(getal2) + ".mp3")
     speel("audio/is.mp3")
-
 
 def getNummer():
     nPulsen = 0
@@ -52,14 +48,12 @@ def getNummer():
 
     return nPulsen % 10
 
-
 def hoornCallback(channel):
     print "Hoorn!", channel
     # herstart het hele script
     GPIO.cleanup()
     python = sys.executable
     os.execl(python, python, * sys.argv)
-
 
 SCHIJFPIN = 25
 AARDPIN = 23
